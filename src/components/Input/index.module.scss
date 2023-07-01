@@ -1,0 +1,81 @@
+.root {
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  font: 16px/26px var(--nunito);
+  color: var(--black);
+  outline: none;
+  border: 1px solid #D0CFCF;
+  border-radius: 4px;
+  height: 54px;
+  padding-left: 15px;
+  overflow: visible;
+
+  &:focus ~ .placeholder {
+    top: -6px;
+    z-index: 100;
+    font: 12px/14px var(--nunito);
+
+    .placeholderBack {
+      top: 5px;
+      z-index: -1;
+    }
+  }
+}
+
+.placeholder {
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  z-index: 1;
+  color: #7E7E7E;
+  font: 16px/26px var(--nunito);
+  transition: .2s ease-in-out;
+}
+
+.placeholderActive {
+  top: -6px;
+  z-index: 100;
+  font: 12px/14px var(--nunito);
+}
+
+.placeholderBack {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #FFFFFF;
+}
+
+.placeholderBackActive {
+  top: 5px;
+  z-index: -1;
+}
+
+.placeholderError {
+  color: var(--error);
+}
+
+.error {
+  border: 2px solid var(--error);
+}
+
+.errorText {
+  margin-top: 4px;
+  padding-left: 15px;
+  font: 12px/14px var(--nunito);
+  color: var(--error);
+}
+
+.hint {
+  margin-top: 4px;
+  padding-left: 15px;
+  font: 12px/14px var(--nunito);
+  color: #7E7E7E;
+}

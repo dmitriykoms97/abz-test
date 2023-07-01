@@ -1,0 +1,13 @@
+.root {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font: 40px/40px var(--nunito);
+  color: var(--black);
+}

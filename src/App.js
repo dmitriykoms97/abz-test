@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import MainLayout from './components/MainLayout';
+import MainPage from './components/MainPage';
+import { useRef } from 'react';
+import { Provider } from 'react-redux';
+import { useStore } from './store/store';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const store = useStore({});
+    const usersRef = useRef();
+    const signUpRef = useRef();
+    const handleUsersScroll = () => {
+        usersRef.current.scrollIntoView({
+            behavior: "smooth",
+            inline: "start"
+        });
+    };
+    const handleSignUpScroll = () => {
+        signUpRef.current.scrollIntoView({
+            behavior: "smooth",
+            inline: "start"
+        });
+    };
+    return (
+        <Provider store={store}>
+            <MainLayout
+                handleUsersScroll={handleUsersScroll}
+                handleSignUpScroll={handleSignUpScroll}>
+                <MainPage
+                    handleSignUpScroll={handleSignUpScroll}
+                    usersRef={usersRef}
+                    signUpRef={signUpRef}
+                />
+            </MainLayout>
+        </Provider>
+    );
 }
 
 export default App;

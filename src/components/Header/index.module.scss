@@ -1,0 +1,28 @@
+.root {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 60px;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1280px) {
+    padding: 0 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 32px;
+  }
+
+  @media (max-width: 390px) {
+    padding: 0 15px;
+  }
+}
+
+.buttonsGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

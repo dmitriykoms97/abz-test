@@ -1,0 +1,53 @@
+.root {
+  position: relative;
+  padding: 140px 0;
+
+  @media (max-width: 460px) {
+    padding: 137px 15px;
+  }
+}
+
+.title {
+  font: 40px/40px var(--nunito);
+  color: var(--black);
+  text-align: center;
+}
+
+.form {
+  max-width: 380px;
+  margin: 50px auto 0;
+}
+
+.inputsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.positionTitle {
+  font: 16px/26px var(--nunito);
+  margin-top: 25px;
+}
+
+.radioGroup {
+  margin-top: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.inputFile {
+  margin-top: 50px;
+}
+
+.submitButton {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  font: 14px/16px var(--nunito);
+  color: var(--error);
+  margin-top: 15px;
+}

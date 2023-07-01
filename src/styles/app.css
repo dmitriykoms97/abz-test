@@ -1,0 +1,19 @@
+@import 'reset.css';
+@import 'fonts.css';
+
+* {
+    box-sizing: border-box;
+}
+
+/* colors */
+:root {
+    --primary: #F4E041;
+    --secondary: #00BDD3;
+    --black: #000000DE;
+    --error: #CB3D40;
+}
+ 
+/* fonts */
+:root {
+    --nunito: 'NunitoRegular', sans-serif;
+}
