@@ -5,7 +5,7 @@ const Card = ({ avatar, name, position, email, phone }) => {
     return (
         <div className={styles.root}>
             <img src={avatar} alt={name} className={styles.avatar}/>
-            <p>
+            <p className={styles.name}>
                 {name}
             </p>
             <div className={styles.info}>
