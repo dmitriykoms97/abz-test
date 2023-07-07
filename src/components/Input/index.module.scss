@@ -38,6 +38,7 @@
   color: #7E7E7E;
   font: 16px/26px var(--nunito);
   transition: .2s ease-in-out;
+  pointer-events: none;
 }
 
 .placeholderActive {
